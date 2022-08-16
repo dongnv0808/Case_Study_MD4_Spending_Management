@@ -10,6 +10,6 @@ const userSchema = new Schema<IUser>({
     password: String
 })
 
-const User = model<IUser>("User", userSchema);
+const User = model<IUser>("users", userSchema);
 
 export {User};
