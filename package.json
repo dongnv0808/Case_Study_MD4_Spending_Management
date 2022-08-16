@@ -2,11 +2,11 @@
   "name": "express-mongoose",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start:dev": "tsc-watch -p tsconfig.build.json --onSuccess \"node dist/index.js\"",
-    "start:prod": "npm install && rimraf dist && tsc -p tsconfig.build.json && node dist/index.js"
+    "start:dev": "tsc-watch -p tsconfig.build.json --onSuccess \"node dist/server.js\"",
+    "start:prod": "npm install && rimraf dist && tsc -p tsconfig.build.json && node dist/server.js"
   },
   "author": "",
   "license": "ISC",

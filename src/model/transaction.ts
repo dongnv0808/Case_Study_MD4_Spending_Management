@@ -1,9 +1,8 @@
-import { Schema } from "mongoose";
+import { model, Schema } from "mongoose";
 import { ICategory } from "./category";
 import { IWallet } from "./wallet";
 
 interface ITransaction {
-    icon: string,
     categoryId: ICategory,
     walletId: IWallet,
     description: string,
@@ -11,7 +10,6 @@ interface ITransaction {
 }
 
 const transactionSchema = new Schema<ITransaction>({
-    icon: String,
     categoryId: {
         type: Schema.Types.ObjectId,
         ref: "category"
@@ -23,3 +21,7 @@ const transactionSchema = new Schema<ITransaction>({
     description: String,
     time: String
 })
+
+const Transaction = model<ITransaction>("transaction", transactionSchema);
+
+export {Transaction};

@@ -1,6 +1,7 @@
 import { model, Schema } from "mongoose"
 import { IUser } from "./user"
 export interface IWallet {
+    icon: string;
     name: string;
     typeMoney: string;
     totalMoney: number;
@@ -8,6 +9,7 @@ export interface IWallet {
 }
 
 const walletSchema = new Schema<IWallet>({
+    icon: String,
     name: String,
     typeMoney: String,
     totalMoney: Number,
